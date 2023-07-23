@@ -17,7 +17,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 *:focus-visible {
