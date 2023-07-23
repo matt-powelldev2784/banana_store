@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="flex min-h-screen min-w-screen">
-      <header>
+      <header className="flex flex-row justify-between h-fit w-full">
         <Image
           src="/foot_boot_logo.svg"
           alt="Footboot Logo"
@@ -12,15 +12,18 @@ export default function Home() {
           className="p-2"
         />
         <nav>
-          <ul>
+          <ul className="flex gap-2 items-center justify-center px-4 h-full">
             <li>
               <a href="/store">Store</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/about">Login</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/contact">Account</a>
+            </li>
+            <li>
+              <a href="/contact">Cart</a>
             </li>
           </ul>
         </nav>
