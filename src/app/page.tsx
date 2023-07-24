@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen min-w-screen">
-      <header className="flex flex-row justify-between h-fit w-full">
+    <main className="min-h-screen min-w-screen">
+      <header className="flex flex-row justify-between h-fit w-full my-2">
         <Image
           src="/foot_boot_logo.svg"
           alt="Footboot Logo"
@@ -64,6 +64,22 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+      <section className="w-screen h-[600px] relative">
+        <Image
+          src="/ronaldo.jpg"
+          alt="Football Boot"
+          fill
+          style={{ objectFit: 'cover' }}
+          className=""
+        />
+        {/* <Image
+          src="/adidas_black_white.webp"
+          alt="Football Boot"
+          fill
+          style={{ objectFit: 'cover' }}
+          className=""
+        /> */}
+      </section>
     </main>
   )
 }
