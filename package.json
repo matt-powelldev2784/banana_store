@@ -8,13 +8,24 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "migrate:deploy": "npx dotenv -e .env.local -- prisma migrate deploy",
+    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
+    "db:push": "npx dotenv -e .env.local -- prisma db push",
+    "migrate:reset": "npx dotenv -e .env.local -- prisma migrate reset",
+    "db:seed": "npx dotenv -e .env.local -- prisma db seed",
+    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
+    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
+    "production:build": "npx prisma generate && npx prisma migrate deploy && next build",
+    "prisma:format": "npx dotenv -e .env.local -- prisma format"
   },
   "dependencies": {
+    "@prisma/client": "^5.0.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "dotenv-cli": "^7.2.1",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.11",
     "husky": "^8.0.3",
@@ -28,6 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "prisma": "^5.0.0"
   }
 }
