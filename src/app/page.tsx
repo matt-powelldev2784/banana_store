@@ -1,21 +1,23 @@
 'use client'
 import { useSession } from 'next-auth/react'
+import { NavBar, Hero } from '@/components'
 
 export default function Home() {
   const { data: session } = useSession()
   console.log('session', session)
 
-  if (session) {
-    return <div>{session?.user?.name} signed in</div>
-  }
+  // if (session) {
+  //   return <div>{session?.user?.name} signed in</div>
+  // }
 
-  if (!session) {
-    return <div>not signed in</div>
-  }
+  // if (!session) {
+  //   return <div>not signed in</div>
+  // }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <p>Banana Store</p>
+    <main className="min-h-screen min-w-screen">
+      <NavBar />
+      <Hero />
     </main>
   )
 }
