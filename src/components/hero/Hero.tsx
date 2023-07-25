@@ -2,33 +2,32 @@ import React from 'react'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import { slideImages } from './data/slideData'
-
-const spanStyle = {
-  padding: '20px',
-  background: '#efefef',
-  color: '#000000',
-}
-
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundSize: 'cover',
-  height: '400px',
-}
+import Image from 'next/image'
 
 export const Hero = () => {
-  const slidesJsx = slideImages.map(({ key, image, text }) => (
-    <div key={key}>
-      <div style={{ ...divStyle, backgroundImage: `url(${image})` }}>
-        <span style={spanStyle}>{text}</span>
+  const SlidesJsx = slideImages.map(({ key, image, alt, text }) => (
+    <div key={key} className="slide-container w-full h-[620px] relative">
+      <Image
+        src={`/slideImages/${image}`}
+        alt={alt}
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+      <div className="absolute flex flex-col justify-center items-start left-32 max-w-md h-full">
+        <p className=" text-white font-bold text-7xl ">{text}</p>
+        <button className="bg-white px-4 py-2 rounded my-8">Shop Now</button>
       </div>
     </div>
   ))
 
+  const properties = {
+    prevArrow: <></>,
+    nextArrow: <></>,
+  }
+
   return (
-    <div className="slide-container">
-      <Slide>{slidesJsx}</Slide>
-    </div>
+    <section className="relative">
+      <Slide {...properties}>{SlidesJsx}</Slide>
+    </section>
   )
 }
