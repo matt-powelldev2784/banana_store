@@ -3,7 +3,7 @@ import { prisma } from '../../../../../prisma/db/client'
 
 export const POST = async (req: NextRequest, _res: NextResponse) => {
   const body = await req.json()
-  const { name, description } = body
+  const { name, image, brand, description, category } = body
   const price = Number(body.price)
 
   if (!name || !description || !price) {
@@ -14,11 +14,14 @@ export const POST = async (req: NextRequest, _res: NextResponse) => {
     })
   }
 
-  const newProduct = await prisma.storeItems.create({
+  const newItem = await prisma.storeItem.create({
     data: {
       name,
+      image,
+      brand,
       description,
       price,
+      category,
     },
   })
 
@@ -26,6 +29,6 @@ export const POST = async (req: NextRequest, _res: NextResponse) => {
     success: true,
     status: 201,
     msg: 'New product added to database',
-    data: newProduct,
+    data: newItem,
   })
 }
