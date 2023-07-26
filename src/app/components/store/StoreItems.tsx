@@ -1,5 +1,5 @@
 import { prisma } from '../../../../prisma/db/client'
-import StoreItem from './components/StoreItem'
+import { StoreItem } from './components/StoreItem'
 
 const getStoreItems = async () => {
   const storeItems = await prisma.storeItem.findMany()
