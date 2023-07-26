@@ -1,10 +1,8 @@
-'use client'
-import { useSession } from 'next-auth/react'
 import { NavBar, Hero } from '@/components'
 
 export default function Home() {
-  const { data: session } = useSession()
-  console.log('session', session)
+  // const { data: session } = useSession()
+  // console.log('session', session)
 
   // if (session) {
   //   return <div>{session?.user?.name} signed in</div>
