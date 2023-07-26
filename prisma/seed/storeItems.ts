@@ -1,6 +1,6 @@
-import { StoreItem } from '@/types/StoreItems'
+import { StoreItemType } from '@/types/StoreItem'
 
-export const storeItemSeeds: StoreItem[] = [
+export const storeItemSeeds: StoreItemType[] = [
   {
     name: 'Adidas',
     image: './storeItems/nike.webp',

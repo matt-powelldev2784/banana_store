@@ -1,14 +1,16 @@
-import { StoreItem } from '@/types/StoreItems'
+import { StoreItem } from '@/types/StoreItem'
+import Image from 'next/image'
 
-export const storeItem = ({
-  name,
-  image,
-  brand,
-  description,
-  price,
-  category,
-}: StoreItem) => {
-  console.log(name, image, brand, description, price, category)
-
-  return <div>storeItem</div>
+export const StoreItem = (storeItem: StoreItem) => {
+  return (
+    <div>
+      <Image
+        src={`/storeItems/${storeItem.image}`}
+        alt={storeItem.description}
+        width={30}
+        height={30}
+        className=""
+      />
+    </div>
+  )
 }

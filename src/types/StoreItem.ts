@@ -1,6 +1,6 @@
 import { StoreItemCategory } from '@prisma/client'
 
-export interface StoreItem {
+export interface StoreItemType {
   name: string
   image: string
   brand: string
