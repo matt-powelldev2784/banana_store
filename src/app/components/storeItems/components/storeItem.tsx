@@ -12,8 +12,8 @@ export const StoreItem = ({ storeItem }: StoreItemProps) => {
         <Image
           src={`/storeItems/${storeItem.image}`}
           alt={storeItem.description}
-          width={300}
-          height={300}
+          width={301}
+          height={301}
         />
         <p className="text-sm font-light text-black/50">{storeItem.name}</p>
         <p className="text-sm text-black/75">£{storeItem.price}</p>
