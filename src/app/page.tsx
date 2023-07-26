@@ -1,4 +1,4 @@
-import { NavBar, Hero } from '@/components'
+import { NavBar, Hero, StoreItems } from '@/app/components'
 
 export default function Home() {
   // const { data: session } = useSession()
@@ -16,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen min-w-screen">
       <NavBar />
       <Hero />
+      <StoreItems />
     </main>
   )
 }

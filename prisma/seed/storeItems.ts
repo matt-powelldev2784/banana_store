@@ -1,44 +1,94 @@
-interface StoreItem {
-  name: string
-  description: string
-  price: number
-}
+import { StoreItemType } from '@/types/StoreItem'
 
-export const storeItemSeeds: StoreItem[] = [
+export const storeItemSeeds: StoreItemType[] = [
   {
-    name: 'Adidas',
+    name: 'Adidas Predator',
+    image: 'adidas.webp',
+    brand: 'Adidas',
     description:
       'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     price: 50,
+    category: 'footballBoot',
   },
   {
-    name: 'Nike',
-    description:
-      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    price: 80,
-  },
-  {
-    name: 'New Balance',
-    description:
-      'football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    price: 80,
-  },
-  {
-    name: 'Adidas',
+    name: 'Nike Morelia',
+    image: 'adidas.webp',
+    brand: 'Nike',
     description:
       'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     price: 50,
+    category: 'footballBoot',
   },
   {
-    name: 'Nike',
+    name: 'New Balance Furon',
+    image: 'adidas.webp',
+    brand: 'New Balance',
     description:
       'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    price: 80,
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'Adidas Predator',
+    image: 'adidas.webp',
+    brand: 'Adidas',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'Nike Morelia',
+    image: 'adidas.webp',
+    brand: 'Nike',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'New Balance Furon',
+    image: 'adidas.webp',
+    brand: 'New Balance',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
   },
   {
     name: 'New Balance',
+    image: 'adidas.webp',
+    brand: 'New Balance',
     description:
-      'football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    price: 80,
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'Adidas Predator',
+    image: 'adidas.webp',
+    brand: 'Adidas',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'Nike Morelia',
+    image: 'adidas.webp',
+    brand: 'Nike',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
+  },
+  {
+    name: 'New Balance Furon',
+    image: 'adidas.webp',
+    brand: 'New Balance',
+    description:
+      'Football boots. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 50,
+    category: 'footballBoot',
   },
 ]
