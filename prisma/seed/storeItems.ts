@@ -1,13 +1,4 @@
-import { StoreItemCategory } from '@prisma/client'
-
-interface StoreItem {
-  name: string
-  image: string
-  brand: string
-  description: string
-  price: number
-  category: StoreItemCategory
-}
+import { StoreItem } from '@/types/StoreItems'
 
 export const storeItemSeeds: StoreItem[] = [
   {
