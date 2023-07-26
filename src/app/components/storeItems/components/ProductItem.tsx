@@ -5,7 +5,7 @@ interface StoreItemProps {
   storeItem: StoreItemType
 }
 
-export default function storeItem({ storeItem }: StoreItemProps) {
+export default function ProductItem({ storeItem }: StoreItemProps) {
   return (
     <div className="aspect-w-1 aspect-h-1">
       <div className="w-full h-full flex flex-col items-start">

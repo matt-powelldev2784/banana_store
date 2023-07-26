@@ -1,12 +1,12 @@
 import { prisma } from '../../../../prisma/db/client'
-import StoreItem from './components/StoreItem'
+import StoreItem from './components/ProductItem'
 
 const getStoreItems = async () => {
   const storeItems = await prisma.storeItem.findMany()
   return storeItems
 }
 
-export const StoreItems = async () => {
+export const ProductItems = async () => {
   const storeItems = await getStoreItems()
 
   const storeItemsJsx = storeItems.map((storeItemDetails) => {
