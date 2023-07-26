@@ -2,6 +2,8 @@ import { prisma } from '../db/client'
 import { storeItemSeeds } from './storeItems'
 
 async function main(): Promise<void> {
+  await prisma.storeItem.deleteMany()
+
   const storeItems = await prisma.storeItem.createMany({
     data: storeItemSeeds.map((product) => ({
       name: product.name,
