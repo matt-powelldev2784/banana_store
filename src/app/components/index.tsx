@@ -1,3 +1,3 @@
-export { Products } from './Products/Products'
+export { StoreItems } from './storeItems/StoreItems'
 export { Hero } from './hero/Hero'
 export { NavBar } from './navbar/NavBar'
