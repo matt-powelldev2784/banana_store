@@ -10,11 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model storeItems {
+model storeItem {
   id              String       @id @default(cuid())
-  name            String       
+  name            String
+  image           String 
+  brand           String    
   description     String      
   price           Int 
+  category        StoreItemCategory
+}
+
+enum StoreItemCategory {
+  footballBoot
+  trainer
+  other
 }
 
 

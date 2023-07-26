@@ -2,11 +2,14 @@ import { prisma } from '../db/client'
 import { storeItemSeeds } from './storeItems'
 
 async function main(): Promise<void> {
-  const storeItems = await prisma.storeItems.createMany({
+  const storeItems = await prisma.storeItem.createMany({
     data: storeItemSeeds.map((product) => ({
       name: product.name,
+      image: product.image,
+      brand: product.brand,
       description: product.description,
       price: product.price,
+      category: product.category,
     })),
   })
 
