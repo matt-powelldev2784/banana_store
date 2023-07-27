@@ -1,16 +1,15 @@
-import { NavBar, Hero, StoreItems } from '@/app/components'
+import { NavBar } from '@/app/components'
 import { checkUserIsAdmin } from '@/app/lib/checkUserIsAdmin'
 import { redirect } from 'next/navigation'
 
-export default async function Home() {
+export default async function DashboardPage() {
   const isAdmin = await checkUserIsAdmin()
-  if (isAdmin) redirect('/pages/dashboard')
+  if (!isAdmin) redirect('/')
 
   return (
     <main className="min-h-screen min-w-screen">
       <NavBar />
-      <Hero />
-      <StoreItems />
+      Admin Dashboard
     </main>
   )
 }
