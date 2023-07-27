@@ -1,16 +1,12 @@
 import { NavBar, Hero, StoreItems } from '@/app/components'
+import { authOptions } from './api/auth/[...nextauth]/route'
+import { getServerSession } from 'next-auth'
 
-export default function Home() {
-  // const { data: session } = useSession()
-  // console.log('session', session)
-
-  // if (session) {
-  //   return <div>{session?.user?.name} signed in</div>
-  // }
-
-  // if (!session) {
-  //   return <div>not signed in</div>
-  // }
+export default async function Home() {
+  const session = await getServerSession(authOptions)
+  console.log('session', session)
+  const isLoggedIn = Boolean(session?.user)
+  console.log('isLoggedIn', isLoggedIn)
 
   return (
     <main className="min-h-screen min-w-screen">

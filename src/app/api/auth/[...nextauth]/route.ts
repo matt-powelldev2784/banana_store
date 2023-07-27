@@ -5,7 +5,7 @@ import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 import EmailProvider from 'next-auth/providers/email'
 
-const handler = NextAuth({
+export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
@@ -22,6 +22,8 @@ const handler = NextAuth({
       maxAge: 1 * 60 * 60, // 1 hour
     }),
   ],
-})
+}
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST }
