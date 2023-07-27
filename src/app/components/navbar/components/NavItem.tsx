@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface ItemDetails {
   href: string
@@ -16,7 +17,7 @@ export const NavItem = ({ itemDetails }: NavItemProps) => {
 
   return (
     <li>
-      <a href={href} className="flexRow gap-1 text-lg">
+      <Link href={href} className="flexRow gap-1 text-lg">
         <Image
           src={`/icons/${image}`}
           alt={alt}
@@ -25,7 +26,7 @@ export const NavItem = ({ itemDetails }: NavItemProps) => {
           className=""
         />
         <p>{text}</p>
-      </a>
+      </Link>
     </li>
   )
 }
