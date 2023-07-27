@@ -1,10 +1,10 @@
 import { NavBar, Hero, StoreItems } from '@/app/components'
-import { authOptions } from './api/auth/[...nextauth]/route'
-import { getServerSession } from 'next-auth'
+import { checkUserIsAdmin } from '@/lib/checkUserIsAdmin'
+import { redirect } from 'next/navigation'
 
 export default async function Home() {
-  const session = await getServerSession(authOptions)
-  console.log('session', session)
+  const isAdmin = await checkUserIsAdmin()
+  if (isAdmin) redirect('/pages/dashboard')
 
   return (
     <main className="min-h-screen min-w-screen">
